@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux'
 import { removeFromWishlist } from '../../redux/features/wishlist.slice';
 
-const Vishlist = () => {
+const Heart = () => {
     const wishlist = useSelector((state) => state.wishlist);
     const dispatch = useDispatch();
     const handleRemove = (id) => {
@@ -36,4 +36,4 @@ const Vishlist = () => {
   )
 }
 
-export default React.memo(Vishlist)
+export default React.memo(Heart)

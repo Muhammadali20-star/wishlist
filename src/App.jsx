@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './pages/layout/Layout';
 const Home = lazy(() => import('./pages/home/Home'));
-const Vishlist = lazy(() => import('./pages/Wishlist/Vishlist'));
+const Heart = lazy(() => import('./pages/heart/Heart'));
 
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Suspense><Layout/></Suspense>}>
           <Route path="/" element={<Suspense><Home /></Suspense>} />
-          <Route path="/wishlist" element={<Suspense><Vishlist /></Suspense>} />
+          <Route path="/wishlist" element={<Suspense><Heart /></Suspense>} />
           </Route>
         </Routes>
       </Suspense>
