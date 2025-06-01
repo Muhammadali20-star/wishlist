@@ -2,7 +2,8 @@ import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './pages/layout/Layout';
 const Home = lazy(() => import('./pages/home/Home'));
-const Wishlist = lazy(() => import('./pages/wishlist/wishlist'));
+const Vishlist = lazy(() => import('./pages/Wishlist/Vishlist'));
+
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Suspense><Layout/></Suspense>}>
           <Route path="/" element={<Suspense><Home /></Suspense>} />
-          <Route path="/wishlist" element={<Suspense><Wishlist /></Suspense>} />
+          <Route path="/wishlist" element={<Suspense><Vishlist /></Suspense>} />
           </Route>
         </Routes>
       </Suspense>
